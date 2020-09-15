@@ -1,6 +1,7 @@
 package com.burncity.sfgdi.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import com.burncity.sfgdi.services.GreetingService;
@@ -13,9 +14,10 @@ import com.burncity.sfgdi.services.GreetingService;
 public class PropertyInjectedController {
 
 	@Autowired
+	@Qualifier("propertyGreetingServiceImpl")
 	public GreetingService service;
 
 	public String getGreeting() {
-		return service.sayGreeting() + " Prop";
+		return service.sayGreeting();
 	}
 }

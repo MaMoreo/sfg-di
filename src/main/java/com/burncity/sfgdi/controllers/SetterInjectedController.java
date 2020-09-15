@@ -1,6 +1,7 @@
 package com.burncity.sfgdi.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import com.burncity.sfgdi.services.GreetingService;
@@ -15,7 +16,7 @@ public class SetterInjectedController {
 	private GreetingService service;
 
 	public String getGreeting() {
-		return service.sayGreeting() + " Setter";
+		return service.sayGreeting();
 	}
 
 	/* Getters and Setters **/
@@ -24,6 +25,7 @@ public class SetterInjectedController {
 	}
 
 	@Autowired
+	@Qualifier("setterGreetingServiceImpl")
 	public void setService(GreetingService service) {
 		this.service = service;
 	}

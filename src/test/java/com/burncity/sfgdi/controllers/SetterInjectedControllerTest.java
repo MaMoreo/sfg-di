@@ -1,11 +1,11 @@
 package com.burncity.sfgdi.controllers;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.burncity.sfgdi.services.GreetingServiceImpl;
+import com.burncity.sfgdi.services.SetterGreetingServiceImpl;
 
 class SetterInjectedControllerTest {
 
@@ -14,12 +14,12 @@ class SetterInjectedControllerTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		controller = new SetterInjectedController();
-		controller.setService( new GreetingServiceImpl());
+		controller.setService( new SetterGreetingServiceImpl());
 	}
 
 	@Test
 	void testGetGreeting() {
-		assertTrue(controller.getGreeting().equals("Hello World"));
+		assertTrue(controller.getGreeting().equals("Hello World from Setter"));
 	}
 
 }

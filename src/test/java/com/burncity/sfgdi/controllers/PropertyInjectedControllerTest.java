@@ -5,7 +5,7 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.burncity.sfgdi.services.GreetingServiceImpl;
+import com.burncity.sfgdi.services.PropertyGreetingServiceImpl;
 
 class PropertyInjectedControllerTest {
 
@@ -14,12 +14,12 @@ class PropertyInjectedControllerTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		controller = new PropertyInjectedController();
-		controller.service = new GreetingServiceImpl();
+		controller.service = new PropertyGreetingServiceImpl();
 	}
 
 	@Test
 	void testGetGreeting() {
-		assertTrue(controller.getGreeting().equals("Hello World"));
+		assertTrue(controller.getGreeting().equals("Hello World from Property"));
 	}
 
 }
