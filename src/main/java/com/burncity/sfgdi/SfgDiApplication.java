@@ -16,7 +16,8 @@ public class SfgDiApplication {
 		ConfigurableApplicationContext applicationContext = SpringApplication.run(SfgDiApplication.class, args);
 		
 		MyController ctrl = (MyController) applicationContext.getBean("myController");
-		ctrl.sayHello();
+		System.out.println("Original --");
+		System.out.println(ctrl.sayHello());
 		
 		System.out.println("Property --");
 		PropertyInjectedController pCtrl = (PropertyInjectedController) applicationContext.getBean("propertyInjectedController");
