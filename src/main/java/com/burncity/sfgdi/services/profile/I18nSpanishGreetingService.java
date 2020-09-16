@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.burncity.sfgdi.services.GreetingService;
 
-@Profile("ES")
+@Profile({"ES", "default"})
 @Service("i18nService")
 public class I18nSpanishGreetingService implements GreetingService {
 
