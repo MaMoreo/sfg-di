@@ -1,4 +1,4 @@
-package com.burncity.sfgdi.controllers;
+package com.burncity.sfgdi.controllers.injection;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;

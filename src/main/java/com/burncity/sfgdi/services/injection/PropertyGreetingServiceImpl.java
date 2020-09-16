@@ -1,6 +1,8 @@
-package com.burncity.sfgdi.services;
+package com.burncity.sfgdi.services.injection;
 
 import org.springframework.stereotype.Service;
+
+import com.burncity.sfgdi.services.GreetingService;
 
 @Service
 public class PropertyGreetingServiceImpl implements GreetingService {

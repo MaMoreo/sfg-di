@@ -5,7 +5,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import com.burncity.sfgdi.services.ConstructorGreetingServiceImpl;
+import com.burncity.sfgdi.controllers.injection.ConstructorInjectedController;
+import com.burncity.sfgdi.services.injection.ConstructorGreetingServiceImpl;
 
 class ConstructorInjectedControllerTest {
 

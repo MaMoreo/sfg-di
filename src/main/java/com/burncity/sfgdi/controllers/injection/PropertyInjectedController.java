@@ -1,4 +1,4 @@
-package com.burncity.sfgdi.controllers;
+package com.burncity.sfgdi.controllers.injection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
